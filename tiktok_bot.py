@@ -1,6 +1,9 @@
 from aiogram import Bot, Dispatcher, types, executor
-from config import token 
+from dotenv import load_dotenv
 import os, time, logging, requests, random
+
+load_dotenv('.env')
+token = os.environ.get('token')
 
 bot = Bot(token=token)
 dp = Dispatcher(bot)
